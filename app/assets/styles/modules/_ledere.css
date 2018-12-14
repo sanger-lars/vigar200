@@ -1,0 +1,85 @@
+/*_ledere.css -----------------------------------------------------------*/
+
+	.overskriften {
+		color: $logoYellow;
+		text-align: center;
+		margin: 0px 0px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.Enhedsledere {
+		color: white;
+		
+		figure img {
+			width: 100%;
+		}
+
+		figure {
+			padding-bottom: 50px;
+			padding-top: 0px;
+		}
+		
+	}
+
+	.Bestyrelse {
+		background-color: $mainGrey;
+		color: white;
+		padding-top: 20px;
+
+		figure img {
+			width: 100%;
+		}
+
+		figure {
+			padding-bottom: 50px;
+			padding-top: 0px;
+		}
+
+	}
+
+	@mixin atLarge {
+		.overskriften {
+			color: $logoYellow;
+			text-align: center;
+			margin: 0px 0px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.flexx3 {
+			display: flex;
+			
+		}
+	
+		.Enhedsledere {
+			color: white;
+			width: 100%;
+
+			
+			figure img {
+				width: 100%;
+				height: auto;
+				
+			}
+
+			figure {
+				width: 30%;
+				padding-bottom: 50px;
+				padding-top: 0px;
+			}
+			
+		}
+
+		.Bestyrelse {
+			background-color: $mainGrey;
+			color: white;
+			padding-top: 20px;
+			
+			figure {
+				padding-bottom: 50px;
+				padding-top: 0px;
+			}
+		}
+
+	}

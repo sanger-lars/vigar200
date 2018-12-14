@@ -1,0 +1,121 @@
+/* _enhederne.css ------------------------------------------------------------- */
+
+	.wrapperE {
+		color: white;
+		height: auto; /* 1800 */
+		padding-top: 30px;
+		padding-bottom: 30px;
+		width: 100%;
+	}
+    	
+
+	#enheds_wrapper {
+		width: 100%;
+		margin: 0px auto;
+		height: 900px;
+	}
+
+	.eWrapper--smaller {
+		margin-bottom: 0px;
+	}	
+
+	#enhed__textdiv {
+		width: 100%; 
+		float: none;
+		text-align: center;
+		color: white;
+		padding: 10px 0px;
+		
+	}
+
+	.enhed {
+		margin: auto; 
+		height: 5px;
+	}
+
+	#enhed__logodiv {
+		width: 100%; 
+		float: none;
+		margin-top: 0px;
+		text-align: center;
+	}
+
+	.enhed_logo--smaller {
+		width: 210px;
+		height: auto;
+		max-width: 300%;
+	}
+
+	.enhed_logo--larger {
+		width: 350px;
+		height: auto;
+		max-width: 300%;
+		padding-bottom: 0px;
+		margin-top: -75px;
+		margin-bottom: -100px;
+
+	}
+
+    @media (min-width: 1000px) {
+    	.wrapperE {
+    		color: white;
+    		height: auto; /* 2000 */
+    		padding-top: 20px;
+    		padding-bottom: 100px;
+    	}
+
+		#enheds_wrapper {
+			width: 60%;
+			margin: 20px auto;
+			height: 600px;
+		}
+
+		#eWrapper--smaller {
+			width: 60%;
+			margin: 20px auto;
+			height: 200px;
+		}
+	
+
+		#enhed__textdiv {
+			width: 60%; 
+			text-align: left;
+			float: left;
+		}
+
+		.enhed {
+			margin: auto; 
+			height: 20px;
+		}
+
+		#enhed__logodiv {
+			width: 30%; 
+			float: right;
+		}
+		
+		.enhed_logo--nyPos {
+			margin-left: 87px;
+			margin-top: 0px;
+		}
+
+		.enhed_logo--smaller {
+			width: 210px;
+			height: auto;
+			max-width: 300%;
+		}
+
+		.enhed_logo--larger {
+			width: 350px;
+			height: auto;
+			max-width: 300%;
+		}
+
+	
+    }
+    
+    .link:hover {
+		color: #93cc19;
+		cursor: default;
+		font-weight: normal;
+    }
+

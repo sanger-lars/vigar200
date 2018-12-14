@@ -1,0 +1,251 @@
+.main-page {
+
+	#traetop {
+		width: 100%;
+		height: auto;
+
+		@mixin atMedium {
+			width: 50%;
+			height: auto;
+			float: right;
+		}
+	}
+		
+	p {
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-align: justify;
+		
+		@mixin atSmall {
+			font-size: 0.9rem;
+		}
+
+ 		@mixin atMedium {
+			font-size: 0.7rem;
+		}
+
+		@mixin atLarge {
+			font-size: 1.0rem;
+		}
+	}
+}
+
+
+.bliv_medlem {
+	clear: both;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+	
+
+}
+
+.bliv_medlem img {
+	width: 400px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#spejderi {
+
+	width: 100%;
+	float: none;
+	/*color: $logoGreen;*/
+	color: $logoYellow; 
+	
+	 @mixin atMedium{
+		float: left;
+		width: 48%;
+	}
+		
+}
+
+.kfum-spejderne {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-top: 35px;
+
+}
+
+#KFUM {
+	float: none;
+	font-family: Arial, sans-serif; 
+	text-align: left;
+	color: $logoYellow;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 10px;
+
+
+	h1 {
+		font-weight: 400;
+		font-size: 50px;
+		margin-top: 0px;
+	
+	}
+
+	h3 {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 0px;
+	}
+
+	@mixin atLarge {
+		float: right;
+		height: 100%;
+		width: 50%;
+		margin-top: 150px;
+		margin-bottom: auto;
+		vertical-align: middle;
+
+		h1 {
+			font-size: 72px;
+			line-height: 90px;
+		}
+
+		h3 {
+			font-size: 20px;
+			line-height: 33.4px;
+		}
+	}
+
+}
+
+.logo--stort {
+
+	img {
+		max-width:  75%;
+	}
+
+	@mixin atLarge {
+		display: inline-block;
+
+		img {
+			max-width:  100%;
+		}
+	}
+
+}
+
+
+.wrap5050 {
+	
+}
+.spejderi {
+	background-color: $backgrColor;
+	float: none;
+	font-size: .8rem;
+	color: $logoYellow;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#main_001 {
+	img {
+		display: none;	
+	}
+}
+
+@mixin atLarge {
+	.wrap5050 {
+		/* display: flex; */
+		height: 300px;
+	}
+	.spejderi {
+		background-color: $backgrColor;
+		float: left;
+		color: $logoYellow;
+		font-size: 1rem;
+		width: 50%;
+		padding: 25px 25px;
+		padding-bottom: 23px;
+	}
+
+	#main_001 {
+		overflow: hidden;
+		height: 550px;
+		width: 50%;
+		float: right;
+		position: relative; 
+
+		img {
+			display: inline;	
+			position: relative;
+			top: -480px;
+			right: 0px;
+			left: 0px;
+			height: 1500px;
+			width: auto;
+			
+		}
+	}
+}
+
+.moeder {
+	width: 100%;
+	
+}
+
+.meet {
+	background-color: $mainGrey;
+	color: white;
+	font-size: .8rem;
+	text-align: center;
+	padding: 10px 5px;
+
+	h1 {
+		font-size: 1rem;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+#main_002 {
+	width: 100%;
+	margin-bottom: -4px;
+}
+
+@mixin atLarge {
+	.moeder {
+		width: 100%;
+		display: flex;
+	}
+
+	.meet {
+		background-color: $mainGrey;
+		color: white;
+		float: left;
+		width: 50%;
+		font-size: 1rem;
+		text-align: center;
+		line-height: 2;
+		
+		h1 {
+			font-size: 2rem;
+		}
+
+		img {
+			width: 50%;
+			height: auto;
+		}
+	}
+
+	#main_002 {
+		width: 50%;
+		float: left;
+	}
+}
+
+
+

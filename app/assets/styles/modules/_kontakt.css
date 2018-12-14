@@ -1,0 +1,20 @@
+/*_kontakt.css------------------------------------*/
+
+.kontakt {
+	&__indhold {
+		margin: 10px;
+		font-size: 0.8rem;
+		color: $logoYellow;
+	
+		@mixin atLarge {
+			margin-top:  -10px;
+			font-size: 1.5rem;
+			margin-left: 20%;
+		}
+	}
+
+	&__indhold a {
+		color: $logoYellow;
+	}
+
+}

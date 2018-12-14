@@ -1,0 +1,83 @@
+/* _links.css -------------------------------------------------------------- */
+
+.links {
+	&__wrapper {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__container {
+		position: relative;
+		background-color: $logoGreen;
+		width: 95%;
+		height: 23rem;
+		margin: 25px auto; 
+		padding: 20px;
+		border: 15px solid $logoRed;
+
+		p {
+			font-size: 1.0rem;
+			line-height: 2;
+			color: $backgrColor;
+			font-weight: bold;
+		}	
+	}
+
+	&__knap {
+		color: $logoGreen;
+		
+		position: absolute;
+		bottom: 2.0rem;
+		left: 50%;
+		transform: translateX(-50%);
+
+		button {
+			border: 1px solid $backgrColor;
+			background-color: $logoGreen;
+			cursor: pointer;
+			padding: 10px 20px 10px 20px;
+
+
+		}
+		button:hover {
+			background-color: $logoRed;
+			color: $backgrColor;
+		}
+		
+	}
+
+	@mixin atLarge {
+		&__wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__container {
+			position: relative;
+			background-color: $logoGreen;
+			width: 30%;
+			height: 23rem;
+			/*margin: 30px;*/
+			padding: 20px;
+			border: 15px solid $logoRed;
+
+			p {
+				font-size: 1.2rem;
+				line-height: 1.5;
+				font-weight: bold;
+			}
+		}
+		
+		&__knap {
+			margin: auto; 
+			width: fit-content;
+		
+			button:hover {
+				background-color: $logoRed;
+				color: $backgrColor;
+			}
+		}
+	}
+}

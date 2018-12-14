@@ -1,0 +1,62 @@
+body {
+	font-family: 'arial', sans-serif;
+	color: #333;
+	background-color: $backgrColor;
+}
+
+.link-green {
+	color: $logoGreen;
+}
+
+.content {
+	color: $logoGreen;
+	color: $logoYellow;
+}
+
+.brun_div {
+	background-color: $mainGrey;
+}
+
+.linje_green {
+  	background-color: $logoGreen;
+  	height: 2px;
+  	width: 100%;
+
+  	@mixin atLarge{
+  		display: none;
+  	}	
+ }
+
+.tc-green {
+	color: #93cc19;
+}
+
+
+img {
+	max-width: 100%;
+	max-height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: $logoYellow;
+	text-decoration: none;
+
+
+}
+a:hover {
+	color: $logoRed;
+	font-weight: bold;
+	cursor: pointer;
+};
+
+iframe {
+	height: 400px;
+
+	@mixin atMedium {
+			height: 600px;
+		}
+}

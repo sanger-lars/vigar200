@@ -1,0 +1,17 @@
+    "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.0.0-rc3",
+    "picturefill": "^3.0.2",
+    "waypoints": "^4.0.1"
+
+
+
+    
+    
+    
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-rename": "1.2.2",
+    "gulp-svg-sprite": "1.3.7",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-uglify": "3.0.0",
+    
+        

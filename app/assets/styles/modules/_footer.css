@@ -1,0 +1,48 @@
+.facebook {
+	background-color: $backgrColor;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px; 
+	
+	p {
+		font-size: 1.0rem;	
+		color: white;
+
+	}
+
+	img {
+		/*transform: translateY(25%); */
+		width: 40px;
+		height: auto;
+		margin-left: 10px;
+	} 
+} 
+
+@mixin atLarge {
+	.facebook {
+		background-color: $backgrColor;
+		width: 100%;
+		text-align: center;
+		height: 45px;
+		color: white;
+		transform: translateY(-40px);
+		
+		p {
+			font-size: 2.0rem;	
+		}
+
+		img {
+			transform: translateY(25%);
+			width: 50px;
+			height: auto;
+		}
+	}
+}
+
+.copyR {
+	background-color: $logoGreen;
+	color: black;
+	text-align: center;
+	height: 3rem;
+	padding: 1rem 0;
+}

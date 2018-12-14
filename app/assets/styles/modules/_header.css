@@ -1,0 +1,29 @@
+.header {
+	height: 2.815rem;
+	
+
+	h1 {
+		text-align: center;
+		color: $logoYellow;
+		font-size: 1.5rem; /* 1 rem*/
+		font-weight: 1;
+	}
+	
+	h3 {
+		text-align: center;
+		color: $logoYellow;
+		font-size: .75rem; /* .6 rem*/
+		font-weight: 1;
+	}
+
+	@mixin atLarge {
+		height: 9.375rem; /* 150 */ 
+		h1 {
+			font-size: 3rem; /* 3 rem*/
+		}
+		
+		h3 {
+			font-size: 1.5rem; /* 1.5 rem*/
+		}
+	}
+}
