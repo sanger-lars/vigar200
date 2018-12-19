@@ -4,6 +4,62 @@ body {
 	background-color: $backgrColor;
 }
 
+.sort_knap {
+	color: $logoYellow;
+	border: 1px solid $logoYellow;
+	background-color: $backgrColor; 
+	padding: 20px 20px 20px 20px;
+	font-size: 1.0rem;
+
+	&:hover {
+		background-color: $logoYellow;
+		color: $backgrColor;
+	}
+
+	@mixin atLarge {
+		font-size: 1.0rem;
+		padding: 20px 20px 20px 20px;
+	}
+}
+
+.lang_smal_container {
+	width: 95%;
+	margin: auto;
+	padding: 30px 0px;
+	margin-bottom: 30px;
+
+	@mixin atLarge {
+		width: 80%;
+	}
+}
+
+.red_green_knap {
+	color: $backgrColor;
+	border: 1px solid $backgrColor;
+	background-color: $logoGreen;
+	padding: 20px 20px 20px 20px;
+	font-size: 1.0rem;
+
+	&:hover {
+		background-color: $logoRed;
+		color: $backgrColor;
+	}
+
+	@mixin atLarge {
+		font-size: 1.0rem;
+		padding: 20px 20px 20px 20px;
+	}
+}
+
+.red_green {
+	border: 10px solid $logoRed;
+	background-color: $logoGreen;
+	
+	@mixin atLarge {
+		border: 15px solid $logoRed;
+	}
+}
+
 .link-green {
 	color: $logoGreen;
 }
