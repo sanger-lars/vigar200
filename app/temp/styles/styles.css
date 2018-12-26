@@ -1687,6 +1687,8 @@ iframe {
 		margin: 0px 0px;
 		padding-top: 20px;
 		padding-bottom: 20px;
+		padding-left: 10px;
+   		padding-right: 10px;
 	}
 
 .Enhedsledere {
@@ -1801,7 +1803,9 @@ iframe {
 		height: 23rem;
 		margin: 25px auto; 
 		padding: 20px;
-		border: 15px solid #cd3c43;	
+		border: 15px solid #cd3c43;
+
+
 	}
 
 .links__container p {
@@ -1810,6 +1814,10 @@ iframe {
 			color: #27211e;
 			font-weight: bold;
 		}
+
+.links__container--mindre {
+			height: 20.0rem;
+	}
 
 .links__knap {
 		color: #007162;
@@ -1865,6 +1873,10 @@ iframe {
 				line-height: 1.5;
 				font-weight: bold;
 			}
+
+		.links__container--mindre {
+				height: 19.0rem;
+		}
 		
 		.links__knap {
 			margin: auto; 

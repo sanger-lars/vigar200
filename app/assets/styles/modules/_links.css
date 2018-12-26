@@ -20,7 +20,13 @@
 			line-height: 2;
 			color: $backgrColor;
 			font-weight: bold;
-		}	
+		}
+
+
+	}
+
+	&__container--mindre {
+			height: 20.0rem;
 	}
 
 	&__knap {
@@ -68,6 +74,10 @@
 				line-height: 1.5;
 				font-weight: bold;
 			}
+		}
+
+		&__container--mindre {
+				height: 19.0rem;
 		}
 		
 		&__knap {

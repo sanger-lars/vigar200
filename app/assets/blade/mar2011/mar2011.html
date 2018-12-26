@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Publication Name: </title>
+</head>
+<body style="margin: 0px;">
+<!--<FFCVerison>3.5</FFCVerison>-->
+	<script language="JavaScript" type="text/javascript">
+	function parseHashParam(strParamName){
+    var strReturn = "";
+    var strHref = window.location.hash;
+    if ( strHref.indexOf("#") > -1 ){
+      var strQueryString = strHref.substr(strHref.indexOf("#")).toLowerCase();
+      var aQueryString = strQueryString.split("&");
+      for ( var iParam = 0; iParam < aQueryString.length; iParam++ ){
+        if (
+  aQueryString[iParam].indexOf(strParamName.toLowerCase() + "=") > -1 ){
+          var aParam = aQueryString[iParam].split("=");
+          strReturn = aParam[1];
+          break;
+        }
+      }
+    }
+    return unescape(strReturn);
+  }
+function ffcmovie_DoFSCommand(command, args) { 
+	if (command=="quit") 
+	{ 
+	location.href="/"; // change to location.href="your web address" 
+	} 
+} 
+function setPLink(url) 
+{ 
+location.hash = url; 
+} 
+ document.write(
+   '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"\n'+
+   '  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"\n'+
+   '  WIDTH="100%" HEIGHT="100%" id="ffcmovie" align="middle">\n'+
+   '  <PARAM NAME="allowScriptAccess" value="sameDomain" />\n'+
+   '  <PARAM NAME="allowFullScreen" value="true" />\n'+
+   '  <PARAM NAME=movie '+
+   '    VALUE="marts_2011.swf" />\n'+
+   '  <PARAM NAME=quality VALUE=high />\n'+
+   '  <PARAM NAME=FlashVars VALUE="inpageno='+parseHashParam('pageno')+'" />\n'+
+   '  <PARAM NAME=scale VALUE=noscale />\n'+
+   '  <EMBED src="marts_2011.swf"' +
+   '    WIDTH="100%" HEIGHT="100% '+
+   '    quality="high"' +
+   '    scale="noscale"' +
+   '   id="ffcmovie" name="ffcmovie"' +
+   '    FlashVars="inpageno='+parseHashParam('pageno')+'"' +
+   '    allowFullScreen="true"' +
+   '    TYPE="application/x-shockwave-flash"'+
+   '  />\n'+
+   '</OBJECT>\n');
+	</script>
+</body>
+</html>
