@@ -12,7 +12,7 @@
 	#enheds_wrapper {
 		width: 100%;
 		margin: 0px auto;
-		height: 900px;
+		/* height: 900px; */
 	}
 
 	.eWrapper--smaller {
@@ -67,7 +67,7 @@
 		#enheds_wrapper {
 			width: 60%;
 			margin: 20px auto;
-			height: 600px;
+			/* height: 750px; */
 		}
 
 		#eWrapper--smaller {
