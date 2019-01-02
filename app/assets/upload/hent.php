@@ -8,8 +8,17 @@
 			hent_alle($filename);
 		}
 	}
+
+
+	function hent_alle($filename) {
+	  	$fil = @file_get_contents($filename, true);
+	  	if ($fil === false) {echo "";}
+	  	else {echo $fil;}
+	  	exit();
+	}
+
 	 
-	if (isset($_POST['gem'])) {
+/*	if (isset($_POST['gem'])) {
 		$data = $_POST['data'];
 		file_put_contents($filename, $data);
 
@@ -30,19 +39,6 @@
 		exit();
 	}
 
-
-	function hent_alle($filename) {
-	  	$fil = @file_get_contents($filename, true);
-	  	if ($fil === false) {
-	  		echo "";
-	  	} else {
-			echo $fil;
-	  	}
-
-	  	exit();    
-    	
-	}
-	
 	function filter_events() {
 		function array_ok($var) {
 		    global $fra;
@@ -76,7 +72,7 @@
 		}
 	}
 
-
+*/
 
 
 
