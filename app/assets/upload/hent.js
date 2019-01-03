@@ -12,27 +12,27 @@ function hent_html(callback) {
 hent_html(udfyld_html);
 
 function udfyld_html(data) {
-	var tekst = data[1];
+	var tekst = data[1*6-1];
     var her = document.getElementById("fam");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);
 
-    tekst = data[3];
+    tekst = data[2*6-1];
     her = document.getElementById("baev");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);
 
-	tekst = data[5];
+	tekst = data[3*6-1];
     her = document.getElementById("ulv");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);
 
-	tekst = data[7];
+	tekst = data[4*6-1];
     her = document.getElementById("spe");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);
 
-    tekst = data[9];
+    tekst = data[5*6-1];
     her = document.getElementById("rov");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);

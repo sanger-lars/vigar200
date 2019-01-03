@@ -1,6 +1,6 @@
 <?php 
 
-	$filename = "upload.json";
+	$filename = "upload2.json";
 
 	if(isset($_POST['alle'])){
 		
