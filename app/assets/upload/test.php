@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (isset($_FILES['files'])) {
         $errors = [];
         $path = '';
-		$extensions = ['jpg', 'jpeg', 'png', 'gif'];
+		$extensions = ['jpg', 'png', 'gif'];
 		$nr = $_POST['nr'];
 		$tekst = $_POST['tekst'];
 		$file_name = $_FILES['files']['name'];
@@ -20,23 +20,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
 		}
 
+		if ( $_POST['poss'] == "0" ) {
+			$errors[] = 'ingen position på billedet';
+		}
+
 		if (empty($errors)) {
-			$file = $path . $_POST['enhed'] . $_POST['poss'] . "." . $file_ext;
-			$ok = unlink($file);
+			$nyt_filnavn = $_POST['enhed'] . $_POST['poss'] . "." . $file_ext;
+			$file = $path . $nyt_filnavn; 
+			
 			$ok = move_uploaded_file($file_tmp, $file);
 			sleep(1);
 			if ($ok) {
 				$jsondata = @file_get_contents("upload2.json", true);
 				$data = json_decode($jsondata);
 				$data[$nr] = $tekst;
+				$gammelt_filnavn = $data[$nr+$_POST['poss']];
+				if ($gammelt_filnavn !== "") {
+					$ok = unlink($path . $gammelt_filnavn);
+				}
+				
+			
 				$ht_txt = "<h3 align='center'>" . $tekst . "</h3><div class='flex3'>";
 				for ($i=1; $i < 4 ; $i++) {
 					$gemt_bld = $data[$nr+$i];
+					if ($_POST['poss'] == $i) {
+						$data[$nr+$i] = $_POST['enhed'] . $i . "." . $file_ext;
+					}
 					if ($gemt_bld !== "" || $_POST['poss'] == $i) {
-						$ht_txt = $ht_txt . "<img src='assets/upload/" . $_POST['enhed'] . $i . "." . $file_ext . "' alt='' style = 'width: auto;height: 300px; padding-right: 20px;'>";
-						if ($_POST['poss'] == $i) {
-							$data[$nr+$i] = $_POST['enhed'] . $i . "." . $file_ext;
-						}
+						$ht_txt = $ht_txt . "<img src='assets/upload/" . $data[$nr+$i] . "' alt='' style = 'width: auto;height: 300px; padding-right: 20px;'>";
+
 					}
 				}
 				$ht_txt = $ht_txt . "<br></div>";
@@ -46,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 				file_put_contents("upload2.json", $jsondata);
 				sleep(1);
-				header( 'Location: ../../upload.html?'.$_POST['enhed'] ) ;
+				header( 'Location: ../../upload.php?'.$_POST['enhed'] ) ;
 				exit();
 			} else {
 				echo $file;
@@ -70,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 				file_put_contents("upload2.json", $jsondata);
 				sleep(1);
-				header( 'Location: ../../upload.html?'.$_POST['enhed'] ) ;
+				header( 'Location: ../../upload.php?'.$_POST['enhed'] ) ;
 				exit();			
 		}
 

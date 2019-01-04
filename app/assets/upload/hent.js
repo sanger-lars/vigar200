@@ -36,4 +36,11 @@ function udfyld_html(data) {
     her = document.getElementById("rov");
     her.innerHTML = "";
     her.insertAdjacentHTML('beforeend', tekst);
+
+    // gør billederne unikke
+    var tal = Math.floor(Math.random()* 9999 + 11111);
+    var x = document.getElementsByTagName("img");
+    for (var i = 1; i < x.length; i++) {
+        x[i].src = x[i].src+"?"+tal;
+    }
 }

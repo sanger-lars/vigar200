@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +28,13 @@
 
 </head>
 <body>
+          <?php 
+          if (isset($_SESSION['u_id'])) {
+            echo '<form action="assets/includes/logout.inc.php" method="POST" style="position: absolute; right: 20px;">
+              <button class="sort_knap" type="submit" name="logout-submit">Log ud</button>
+            </form>';
+          }
+        ?>
   <script src="menu.html"></script>    
   <br>
   <div class= "linje_green"></div>
@@ -56,7 +66,11 @@
           <option value="2">midten</option>
           <option value="3">højre</option>
         </select>
-        <button class="sort_knap" type="submit" id="send" > Upload </button>
+        <?php 
+          if (isset($_SESSION['u_id'])) {
+            echo '<button class="sort_knap" type="submit" id="send" > Upload </button>';
+          }
+        ?>
         <img id="output_image" style="width: auto;">
           
         <br>

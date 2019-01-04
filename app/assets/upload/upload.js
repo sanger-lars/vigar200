@@ -13,16 +13,14 @@ function hent_gemte_data(callback) {
 
 function bild() {
 	let fnavn;
-	console.log(this.src.split('/')[5]);
+	console.log(this.src.split('/')[6]);
 	if (confirm('vil du slette billedet ?')) {
-		debugger;
 		var fnavn1 = this.src.split('/')[6];
 		fnavn = fnavn1.split('?')[0];
-		i = 0;
+		i = 0; 
 		while (alle_data[i] !== fnavn) {
 			i++;
 		}
-		debugger;
 		alle_data[i] = "";
 		var txt = alle_data[nr+4];
 		var n = txt.indexOf(fnavn);
@@ -32,10 +30,10 @@ function bild() {
 
 		alle_data[nr+4] = txt;
 		var posting = $.post("assets/upload/gem.php", {
-	    	data: JSON.stringify(alle_data)
+	    	data: JSON.stringify(alle_data),
+	    	filnavn: fnavn
 	    }).done(function (data){
-	    	//this.remove(0);
-			window.location.reload();
+	    	//
 		})
 		
 	}

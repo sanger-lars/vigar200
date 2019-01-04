@@ -49,7 +49,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function(){
 
 
 gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function(){
-	return gulp.src(["./app/*.html",])
+	return gulp.src(["./app/*.html","./app/*.php"])
 		.pipe(usemin({
 			css: [function(){return rev()}],
 			js: [function(){return rev()}]
