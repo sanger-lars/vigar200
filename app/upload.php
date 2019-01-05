@@ -23,6 +23,9 @@
       color: yellow;
     }
     @media (min-width: 1000px) {
+      .flex3 img {
+        padding: 10px;
+      }
     {
   </style>
 

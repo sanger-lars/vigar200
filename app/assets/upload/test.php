@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						$data[$nr+$i] = $_POST['enhed'] . $i . "." . $file_ext;
 					}
 					if ($gemt_bld !== "" || $_POST['poss'] == $i) {
-						$ht_txt = $ht_txt . "<img src='assets/upload/" . $data[$nr+$i] . "' alt='' style = 'width: auto;height: 300px; padding-right: 20px;'>";
+						$ht_txt = $ht_txt . "<img src='assets/upload/" . $data[$nr+$i] . "' alt='' style = 'width: auto;height: 300px;'> id = 'uploadet_bild'";
 
 					}
 				}
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				for ($i=1; $i < 4 ; $i++) {
 					$gemt_bld = $data[$nr+$i];
 					if ($gemt_bld !== "" ){
-						$ht_txt = $ht_txt . "<img src='assets/upload/" . $gemt_bld . "' alt='' style = 'width: auto;height: 300px; padding-right: 20px;'>";
+						$ht_txt = $ht_txt . "<img src='assets/upload/" . $gemt_bld . "' alt='' style = 'width: auto;height: 300px;' id = 'uploadet_bild'>";
 					}
 				}
 				$ht_txt = $ht_txt . "<br></div>";

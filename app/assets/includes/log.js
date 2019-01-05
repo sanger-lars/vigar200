@@ -3,7 +3,6 @@
 	zzz = window.location.search;
 
 	function check_para() {
-	debugger;
 	  if (zzz > "") {
 	    var posting = $.post("assets/includes/_log.php", {
 	      check: "true",
