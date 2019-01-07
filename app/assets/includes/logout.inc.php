@@ -5,7 +5,6 @@ if (isset($_POST['logout-submit'])) {
 	session_unset();
 	session_destroy();
 	header("Location: ../../index.html");
-	exit();
 }
 
 ?>

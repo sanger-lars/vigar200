@@ -77,7 +77,7 @@ body {
   	background-color: $logoGreen;
   	height: 2px;
   	width: 100%;
-
+	
   	@mixin atLarge{
   		display: none;
   	}	

@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (isset($_FILES['files'])) {
         $errors = [];
-        $path = '';
+        $path = '../';
 		$extensions = ['jpg', 'png', 'gif'];
 		$nr = $_POST['nr'];
 		$tekst = $_POST['tekst'];
@@ -31,11 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$ok = move_uploaded_file($file_tmp, $file);
 			sleep(1);
 			if ($ok) {
-				$jsondata = @file_get_contents("upload2.json", true);
+				$jsondata = @file_get_contents("../upload2.json", true);
 				$data = json_decode($jsondata);
 				$data[$nr] = $tekst;
 				$gammelt_filnavn = $data[$nr+$_POST['poss']];
-				if ($gammelt_filnavn !== "") {
+				if ($gammelt_filnavn !== $nyt_filnavn) {
 					$ok = unlink($path . $gammelt_filnavn);
 				}
 				
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						$data[$nr+$i] = $_POST['enhed'] . $i . "." . $file_ext;
 					}
 					if ($gemt_bld !== "" || $_POST['poss'] == $i) {
-						$ht_txt = $ht_txt . "<img src='assets/upload/" . $data[$nr+$i] . "' alt='' style = 'width: auto;height: 300px;'> id = 'uploadet_bild'";
+						$ht_txt = $ht_txt . "<img src='assets/upload/" . $data[$nr+$i] . "' alt='' style = 'width: auto;height: 300px;' id = 'uploadet_bild'>";
 
 					}
 				}
@@ -56,16 +56,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 				$jsondata = json_encode($data);
 
-				file_put_contents("upload2.json", $jsondata);
+				file_put_contents("../upload2.json", $jsondata);
 				sleep(1);
-				header( 'Location: ../../upload.php?'.$_POST['enhed'] ) ;
+				header( 'Location: ../../../upload.php?'.$_POST['enhed'] ) ;
 				exit();
 			} else {
 				echo $file;
 				exit();
 			}		
 		} else {
-				$jsondata = @file_get_contents("upload2.json", true);
+				$jsondata = @file_get_contents("../upload2.json", true);
 				$data = json_decode($jsondata);
 				$data[$nr] = $tekst;
 				$ht_txt = "<h3 align='center'>" . $tekst . "</h3><div class='flex3'>";
@@ -80,9 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 				$jsondata = json_encode($data);
 
-				file_put_contents("upload2.json", $jsondata);
+				file_put_contents("../upload2.json", $jsondata);
 				sleep(1);
-				header( 'Location: ../../upload.php?'.$_POST['enhed'] ) ;
+				header( 'Location: ../../../upload.php?'.$_POST['enhed'] ) ;
 				exit();			
 		}
 

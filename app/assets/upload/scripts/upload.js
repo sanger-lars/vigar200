@@ -2,8 +2,7 @@ let log = console.log;
 let nr;
 
 function hent_gemte_data(callback) {
-	log('henter data');
-	var posting = $.post("assets/upload/hent.php", {
+	var posting = $.post("assets/upload/scripts/hent.php", {
     alle: "alle"
   }).done(function (data) {
     var alle_data = JSON.parse(data);
@@ -13,9 +12,12 @@ function hent_gemte_data(callback) {
 
 function bild() {
 	let fnavn;
-	console.log(this.src.split('/')[6]);
+	// check for localhost
+	var lokal = (document.location.href.indexOf("localhost") > -1);
+	var split_nr = (lokal) ? 5 : 6;
+
 	if (confirm('vil du slette billedet ?')) {
-		var fnavn1 = this.src.split('/')[6];
+		var fnavn1 = this.src.split('/')[split_nr];
 		fnavn = fnavn1.split('?')[0];
 		i = 0; 
 		while (alle_data[i] !== fnavn) {
@@ -26,22 +28,25 @@ function bild() {
 		var n = txt.indexOf(fnavn);
 		
 		txt = txt.substr(0, n-24) + txt.substr(n+75);
-		document.getElementById('preview').innerHTML = txt;
+		//document.getElementById('preview').innerHTML = txt;
 
 		alle_data[nr+4] = txt;
-		var posting = $.post("assets/upload/gem.php", {
+		var posting = $.post("assets/upload/scripts/gem.php", {
 	    	data: JSON.stringify(alle_data),
 	    	filnavn: fnavn
 	    }).done(function (data){
-	    	//
-		})
+	    	location.reload();
+		}).fail(function(data) {
+    		alert( "error" );
+  		  	debugger;
+ 		});
 		
 	}
 }
 
-function upload_billed() {
+/*function upload_billed() {
 
-	var posting = $.post("assets/upload/test.php", {
+	var posting = $.post("assets/upload/scripts/test.php", {
     formData: new FormData($("#larsform"))
   }).done(function (data) {
   	debugger;
@@ -51,7 +56,7 @@ function upload_billed() {
     alert( "error" );
     debugger;
   });
-} 
+} */
 
 function vis_data(data) {
 
@@ -93,10 +98,15 @@ function vis_data(data) {
     	filnavn[i] = im[i].src.split('/')[5];
     }
 
+    var cc = document.getElementsByName('logout-submit');
+    if (cc.length > 0) {
+    	$("img").each(function (index) {
+    		$(this).on("click", bild);
+    	});
+    } else alert('Du er ikke logget ind');
+
     // check for billede click
-    $("img").each(function (index) {
-      $(this).on("click", bild);
-    });
+
 
     // ændre teksten når den bliver tastet ind
 	var txt = document.getElementById("tekst");
@@ -112,6 +122,7 @@ function vis_data(data) {
    {
     var output = document.getElementById('output_image');
     output.src = reader.result;
+    debugger;
     output.style.height = "300px";
    }
    reader.readAsDataURL(ev.target.files[0]);
@@ -121,8 +132,6 @@ function vis_data(data) {
 var inp;
 
 document.addEventListener("DOMContentLoaded", function() {
-
-	console.log('programmet er startet');
 	
 	var xxx = window.location.search;
 	if (xxx > "") {

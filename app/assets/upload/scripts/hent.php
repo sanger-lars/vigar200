@@ -1,6 +1,6 @@
 <?php 
 
-	$filename = "upload2.json";
+	$filename = "../upload2.json";
 
 	if(isset($_POST['alle'])){
 		
@@ -9,6 +9,12 @@
 		}
 	}
 
+	if(isset($_POST['bannere'])){
+		
+		if ($_POST['bannere'] == "alle") {
+			hent_bannere("../bannere.json");
+		}
+	}
 
 	function hent_alle($filename) {
 	  	$fil = @file_get_contents($filename, true);
@@ -17,6 +23,12 @@
 	  	exit();
 	}
 
+	function hent_bannere($filename) {
+	  	$fil = @file_get_contents($filename, true);
+	  	if ($fil === false) {echo "";}
+	  	else {echo $fil;}
+	  	exit();
+	}
 	 
 /*	if (isset($_POST['gem'])) {
 		$data = $_POST['data'];
