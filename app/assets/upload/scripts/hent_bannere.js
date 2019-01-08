@@ -13,6 +13,11 @@ hent_html(udfyld_html);
 
 function udfyld_html(data) {
 	var tekst = data[2];
+    if (data[6] != "") {
+        document.getElementById('tekstfeldt').innerHTML = alle_data[6];
+        $("#tekstfeldt").toggleClass("skjul",false);  
+    } 
+    
 
     var her = document.getElementById("banner");
     her.innerHTML = "";

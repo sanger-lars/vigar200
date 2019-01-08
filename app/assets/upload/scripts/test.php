@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		if (empty($errors)) {
 			$nyt_filnavn = $_POST['enhed'] . $_POST['poss'] . "." . $file_ext;
 			$file = $path . $nyt_filnavn; 
-			
 			$ok = move_uploaded_file($file_tmp, $file);
 			sleep(1);
 			if ($ok) {
+				echo 'ok' . '<br>';
 				$jsondata = @file_get_contents("../upload2.json", true);
 				$data = json_decode($jsondata);
 				$data[$nr] = $tekst;

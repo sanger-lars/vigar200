@@ -12,7 +12,7 @@
 	if(isset($_POST['bannere'])){
 		
 		if ($_POST['bannere'] == "alle") {
-			hent_bannere("../bannere.json");
+			hent_bannere("../banner.json");
 		}
 	}
 

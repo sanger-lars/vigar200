@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (isset($_POST['jsondata'])) {
-    	$filename = "../bannere.json";
+    	$filename = "../banner.json";
     	$jsondata = $_POST['jsondata'];
     	file_put_contents($filename, $jsondata);
 		sleep(1);
