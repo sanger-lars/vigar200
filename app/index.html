@@ -15,12 +15,12 @@
 	
 	<style>
 		
-		.skjul {
+	.skjul {
     	display: none;
     }
 
-		.hvidbrun {
-      font-size: 2rem;
+	.hvidbrun {
+      font-size: 1rem;
       color: #7d8260;
       border: 20px solid #7d8260;
       background-color: white;
@@ -29,7 +29,13 @@
       text-align: center;
       margin: auto;
     }
-		.hvidbrun a {color: #7d8260;}
+	.hvidbrun a {color: #7d8260;}
+	
+	@media (min-width: 1000px) {
+		.hvidbrun {
+			font-size: 2rem;
+		}
+	}
 	</style>
 	
 	<script>

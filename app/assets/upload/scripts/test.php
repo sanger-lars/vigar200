@@ -30,12 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$ok = move_uploaded_file($file_tmp, $file);
 			sleep(1);
 			if ($ok) {
-				echo 'ok' . '<br>';
 				$jsondata = @file_get_contents("../upload2.json", true);
 				$data = json_decode($jsondata);
 				$data[$nr] = $tekst;
 				$gammelt_filnavn = $data[$nr+$_POST['poss']];
-				if ($gammelt_filnavn !== $nyt_filnavn) {
+				if ($gammelt_filnavn !== "" && $gammelt_filnavn !== $nyt_filnavn) {
 					$ok = unlink($path . $gammelt_filnavn);
 				}
 				

@@ -2,7 +2,7 @@
 
 	if(isset($_POST['check'])) {
 		$id = $_POST['test'];
-		if ($id !== "leder2019") {
+		if ($id !== "######") {
 			echo $id; // fejl
 		} else {
 			//Log in user here

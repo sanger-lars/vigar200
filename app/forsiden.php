@@ -59,7 +59,7 @@
     }
 
     .hvidbrun {
-      font-size: 2rem;
+      font-size: 1rem;
       color: #7d8260;
       border: 20px solid #7d8260;
       background-color: white;
@@ -78,19 +78,31 @@
       text-align: center;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1025px) {
       .flex3 img {
         padding: 10px;
       }
 
+      .hvidbrun {
+        font-size: 2rem;
+      }
+      
+      #banner-div  {
+        padding-left: 50px;
+      }
       textarea {
         margin-top: 20px;
         font-size: 1.2rem; 
-        width: 80%; 
+        width: 70%; 
         height: 100px;
         text-align: center;
       }
-
+      
+      #banner-div {
+        display: flex;
+        margin: auto;
+        width: 80%;
+      }
     }
 
 
@@ -126,11 +138,13 @@
             <br><br>
             <div class= "linje_green" style="display: block;"></div>
             <br><br>
-            <label for="bannere">find banner ></label> 
-            <input id="upload_ban" type="file" name="files" >
-            <label for="dokument">tilføj dokument ></label> 
-            <input id="upload_link" type="file" name="dokument" onchange="lav_html(false)">
-            <span class="knap" onmousedown="lav_html(true)">Slet banner</span>
+            <div id="banner-div">
+              <p><label for="bannere">find banner ></label> 
+              <input id="upload_ban" type="file" name="files" ></p>
+              <p><label for="dokument">tilføj dokument ></label> 
+              <input id="upload_link" type="file" name="dokument" onchange="lav_html(false)"></p>
+              <p><span class="knap" onmousedown="lav_html(true)">Slet banner</span></p>
+            </div>  
             <br>
             <br>
             <img id="output_image" style="width: 95%";>

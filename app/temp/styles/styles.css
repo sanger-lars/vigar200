@@ -543,7 +543,7 @@ template {
 	font-size: 1.0rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .content {
 		font-size: 1.8rem
@@ -569,7 +569,7 @@ body {
 		color: #27211e;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .sort_knap {
 		font-size: 1.0rem;
@@ -584,7 +584,7 @@ body {
 	margin-bottom: 30px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .lang_smal_container {
 		width: 80%
@@ -604,7 +604,7 @@ body {
 		color: #27211e;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .red_green_knap {
 		font-size: 1.0rem;
@@ -617,7 +617,7 @@ body {
 	background-color: #007162;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .red_green {
 		border: 15px solid #cd3c43
@@ -643,7 +643,7 @@ body {
   	width: 100%;	
  }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .linje_green {
   		display: none	
@@ -730,7 +730,7 @@ iframe {
 			color: white;
 		}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 		.indmeld__wrapper {
 			background-color: #7d8260;
 			width: 100%;
@@ -781,7 +781,7 @@ iframe {
 	margin-right: auto;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .wrapper {
 			max-width: 1500px
@@ -814,7 +814,7 @@ iframe {
 		padding-right: 0;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .wrapper--no-padding-until-large {
 			padding-left: 18px;
@@ -882,7 +882,7 @@ iframe {
 	}
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .topbanner #undertekst {
 			font-size: 1.3rem; 
@@ -919,7 +919,7 @@ iframe {
 		}
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .topbanner {
 		height: 100px, 250px ;
@@ -951,7 +951,7 @@ iframe {
 		font-weight: 1;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .header {
 		height: 9.375rem /* 150 */
@@ -978,7 +978,7 @@ iframe {
 		background-color: rgba(0,113,98, .8);
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .site-header {
 		
@@ -1051,7 +1051,7 @@ iframe {
 			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .site-header__menu-icon {
 			display: none
@@ -1087,7 +1087,7 @@ iframe {
 
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .site-header__menu-content{
 			opacity: 1;
@@ -1144,7 +1144,7 @@ iframe {
 	}
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 		.meetings p {
 			display: block;
 			font-size: 1.8rem;
@@ -1192,7 +1192,7 @@ iframe {
 	}
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .main-page p {
 			font-size: 1.0rem
@@ -1271,7 +1271,7 @@ iframe {
 		line-height: 0px;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 #KFUM {
 		float: right;
@@ -1298,7 +1298,7 @@ iframe {
 		max-width:  75%;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .logo--stort {
 		display: inline-block
@@ -1327,7 +1327,7 @@ iframe {
 		display: none;	
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 	.wrap5050 {
 		/* display: flex; */
 		height: 300px;
@@ -1389,7 +1389,7 @@ iframe {
 	margin-bottom: -4px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 	.moeder {
 		width: 100%;
 		display: -webkit-box;
@@ -1496,7 +1496,7 @@ iframe {
 		display: list-item;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .primary-nav2 li {
 			display: inline;
@@ -1528,7 +1528,7 @@ iframe {
 		margin-left: 10px;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 	.facebook {
 		background-color: #27211e;
 		width: 100%;
@@ -1721,7 +1721,7 @@ iframe {
 			padding-top: 0px;
 		}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 		.overskriften {
 			color: #93cc19;
 			text-align: center;
@@ -1776,7 +1776,7 @@ iframe {
 		color: #93cc19;
 	}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 
 .kontakt__indhold {
 			margin-top:  -10px;
@@ -1844,7 +1844,7 @@ iframe {
 			color: #27211e;
 		}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 		.links__wrapper {
 			width: 100%;
 			display: -webkit-box;
@@ -1940,7 +1940,7 @@ iframe {
 			color: #27211e;
 		}
 
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
 		.udlaan__wrapper {
 			width: 100%;
 			display: -webkit-box;

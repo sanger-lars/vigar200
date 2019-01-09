@@ -44,23 +44,8 @@ function bild() {
 	}
 }
 
-/*function upload_billed() {
-
-	var posting = $.post("assets/upload/scripts/test.php", {
-    formData: new FormData($("#larsform"))
-  }).done(function (data) {
-  	debugger;
-  	log(formData, 'hej');
-    var alle_data = JSON.parse(data);
-  }).fail(function(data) {
-    alert( "error" );
-    debugger;
-  });
-} */
 
 function vis_data(data) {
-
-
 	// bestem hvilken enhed
 	var e = document.getElementById("enhed");
 	nr = e.selectedIndex*6-5;
@@ -98,14 +83,13 @@ function vis_data(data) {
     	filnavn[i] = im[i].src.split('/')[5];
     }
 
+    // check for billede click hvis logget ind
     var cc = document.getElementsByName('logout-submit');
     if (cc.length > 0) {
     	$("img").each(function (index) {
     		$(this).on("click", bild);
     	});
     } else alert('Du er ikke logget ind');
-
-    // check for billede click
 
 
     // ændre teksten når den bliver tastet ind
